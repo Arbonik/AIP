@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour appversion="6.0.3" apprev="17298" start="node1">
+  <panorama id="node1">
+    <input levelbias="0.400" overlap="1" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0" width="1920" height="1920">
+      <level predecode="0" width="1920" height="1920" preload="0"/>
+      <level predecode="0" width="960" height="960" preload="0"/>
+      <level predecode="1" width="480" height="480" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="-124.58" tilt="-2.8" fov="100" projection="4"/>
+      <flyin pan="0" tilt="-90" fov="170" projection="9"/>
+      <min pan="0" tilt="-90" fovpixel="1"/>
+      <max fovfisheye="360" pan="360" scaletofit="1" fovstereographic="270" tilt="90" fov="100"/>
+    </view>
+    <userdata longitude="" source="" author="" tags="pano" description="" copyright="" comment="" customnodeid="" latitude="" info="" title="" datetime="2019:06:11 16:38:24"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label background="1" textcolor="0x000000" bordercolor="0x000000" border="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" width="180" height="20" backgroundalpha="1" textalpha="1" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0"/>
+      <hotspot pan="-140.62" skinid="ht_info" url="http://www.oaokatun.ru/" tilt="-1.5" description="ОЭЗ «Бирюзовая Катунь» — экономическая зона туристско-рекреационного типа, создана в Алтайском крае постановлением Правительства РФ от 3 февраля 2007 года.&#xa;Расположена в живописном месте предгорий Алтая на левом берегу Катуни со стороны Алтайского края. Территория туристической зоны занимает площадь 3326 га.&#xa; " target="_blank" title="Бирюзовая Катунь инфо" id="Point01"/>
+      <hotspot pan="-127.8" skinid="ht_node" url="{node2}" tilt="4.22" description="" target="-20.6/1.9/100.0" title="Набережная" id="Point02"/>
+      <hotspot pan="-315.15" skinid="ht_image" url="images/null_kilometer-228x228.jpg" tilt="-4.6" description="" target="" title="Нулевой километр" id="Point03"/>
+      <hotspot pan="-233.47" skinid="ht_url" url="https://dm-centre.ru/kvantorium" tilt="-84.14" description="" target="_blank" title="Кванториум г. Екатеринбурга" id="Point04"/>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" blendcolor="0x000000" enabled="1" zoomoutpause="1" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" blendtime="1" type="crossdissolve"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+    <control simulatemass="1" lockedmouse="0" dblclickfullscreen="0" lockedkeyboard="0" contextprojections="0" hideabout="0" speedwheel="1" lockedwheel="0" invertwheel="0" invertcontrol="1" lockedkeyboardzoom="0" sensitivity="8" contextfullscreen="1" rubberband="0"/>
+  </panorama>
+  <panorama id="node2">
+    <input levelbias="0.400" overlap="1" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0" width="1920" height="1920">
+      <level predecode="0" width="1920" height="1920" preload="0"/>
+      <level predecode="0" width="960" height="960" preload="0"/>
+      <level predecode="1" width="480" height="480" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" tilt="0" fov="100" projection="4"/>
+      <flyin pan="0" tilt="-90" fov="170" projection="9"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovfisheye="360" pan="360" scaletofit="1" fovstereographic="270" tilt="90" fov="120"/>
+    </view>
+    <userdata longitude="" source="" author="" tags="pano" description="" copyright="" comment="" customnodeid="" latitude="" info="" title="" datetime="2019:06:11 16:39:40"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label background="1" textcolor="0x000000" bordercolor="0x000000" border="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" width="180" height="20" backgroundalpha="1" textalpha="1" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0"/>
+      <hotspot pan="-144.68" skinid="ht_node" url="{node1}" tilt="5.68" description="" target="-129.4/2.3/100.0" title="" id="Point01"/>
+      <hotspot pan="-41.34" skinid="ht_node" url="{node3}" tilt="1.29" description="" target="0.0/0.0/100.0" title="" id="Point02"/>
+      <hotspot pan="-298.85" skinid="ht_url" url="http://www.oaokatun.ru/food/restoran-rybnoe-mesto-korabl" tilt="-1.41" description="" target="_blank" title="Ресторан &quot;Рыбное место&quot;" id="Point03"/>
+      <hotspot pan="-307.15" skinid="ht_info" url="" tilt="0.72" description="Размещение: комплекс состоит из двухэтажного благоустроенного деревянного коттеджа на 8 номеров, трех отдельно стоящих альпийских домиков, отдельно стоящего коттеджа в  5 минутах ходьбы от основного корпуса (на 3 номера). Максимальная вместимость 17 человек (17 осн. мест).  Питание: в высокий сезон завтраки включены в стоимость, обед и ужин в кафе на 1 этаже по меню. Инфраструктура: &#xa;кафе на первом этаже с летней верандой (спутниковое ТВ, DVD, музыкальный центр)&#xa;кнфраструктура развлекательного комплекса &quot;Бирюзовая Катунь&quot; (за отдельную плату)&#xa;Зимой: в 1 км от базы расположен Горнолыжный комплекс &quot;Бирюзовая Катунь&quot; с лыжными трассами и бугельными подъемниками, каток на озере." target="" title="Отель &quot;Бухта&quot;" id="Point05"/>
+      <hotspot pan="-15.93" skinid="ht_url" url="https://dm-centre.ru/kvantorium" tilt="-89.42" description="" target="_blank" title="Кванториум г. Екатеринбурга" id="Point06"/>
+      <hotspot pan="-66.68" skinid="ht_image" url="images/ddcae1418476302f3c8e50041eaf5d1e.jpg" tilt="0.93" description="" target="" title="Ирис русский" id="Point04"/>
+      <hotspot pan="-15.86" skinid="ht_image" url="images/foto5-altai-silalotosa.jpg" tilt="10.85" description="" target="" title="" id="Point07"/>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" blendcolor="0x000000" enabled="1" zoomoutpause="1" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" blendtime="1" type="crossdissolve"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+    <control simulatemass="1" lockedmouse="0" dblclickfullscreen="0" lockedkeyboard="0" contextprojections="0" hideabout="0" speedwheel="1" lockedwheel="0" invertwheel="0" invertcontrol="1" lockedkeyboardzoom="0" sensitivity="8" contextfullscreen="1" rubberband="0"/>
+  </panorama>
+  <panorama id="node3">
+    <input levelbias="0.400" overlap="1" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0" width="1920" height="1920">
+      <level predecode="0" width="1920" height="1920" preload="0"/>
+      <level predecode="0" width="960" height="960" preload="0"/>
+      <level predecode="1" width="480" height="480" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" tilt="0" fov="100" projection="4"/>
+      <flyin pan="0" tilt="-90" fov="170" projection="9"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovfisheye="360" pan="360" scaletofit="1" fovstereographic="270" tilt="90" fov="120"/>
+    </view>
+    <userdata longitude="" source="" author="" tags="pano" description="" copyright="" comment="" customnodeid="" latitude="" info="" title="" datetime="2019:06:11 16:41:23"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label background="1" textcolor="0x000000" bordercolor="0x000000" border="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" width="180" height="20" backgroundalpha="1" textalpha="1" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0"/>
+      <hotspot pan="-202.64" skinid="ht_node" url="{node2}" tilt="-1.97" description="" target="-149.2/-1.2/100.0" title="" id="Point01"/>
+      <hotspot pan="-320.6" skinid="ht_url" url="http://www.oaokatun.ru/" tilt="-10.1" description="" target="_blank" title="Бирюзовая Катунь сайт" id="Point02"/>
+      <hotspot pan="-352.08" skinid="ht_node" url="{node4}" tilt="-2.34" description="" target="-28.8/-1.1/100.0" title="" id="Point03"/>
+      <hotspot pan="-304.94" skinid="ht_url" url="http://www.oaokatun.ru/food/restoran-rybnoe-mesto-korabl" tilt="0.42" description="" target="_blank" title="Ресторан &quot;Рыбное место&quot;" id="Point04"/>
+      <hotspot pan="-151.34" skinid="ht_url" url="https://dm-centre.ru/kvantorium" tilt="-89.16" description="" target="_blank" title="Кванториум г. Екатеринбурга" id="Point05"/>
+      <hotspot pan="-309.17" skinid="ht_url" url="http://www.oaokatun.ru/accommodation/kottedzh-buhta" tilt="3.14" description="" target="_blank" title="Отель &quot;Бухта&quot;" id="Point07"/>
+      <hotspot pan="-258.71" skinid="ht_image" url="images/429176_56848371.jpg" tilt="7.31" description="" target="" title="Рододендрон Ледебура" id="Point06"/>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" blendcolor="0x000000" enabled="1" zoomoutpause="1" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" blendtime="1" type="crossdissolve"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+    <control simulatemass="1" lockedmouse="0" dblclickfullscreen="0" lockedkeyboard="0" contextprojections="0" hideabout="0" speedwheel="1" lockedwheel="0" invertwheel="0" invertcontrol="1" lockedkeyboardzoom="0" sensitivity="8" contextfullscreen="1" rubberband="0"/>
+  </panorama>
+  <panorama id="node4">
+    <input levelbias="0.400" overlap="1" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0" width="1920" height="1920">
+      <level predecode="0" width="1920" height="1920" preload="0"/>
+      <level predecode="0" width="960" height="960" preload="0"/>
+      <level predecode="1" width="480" height="480" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" tilt="0" fov="100" projection="4"/>
+      <flyin pan="0" tilt="-90" fov="170" projection="9"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovfisheye="360" pan="360" scaletofit="1" fovstereographic="270" tilt="90" fov="120"/>
+    </view>
+    <userdata longitude="" source="" author="" tags="pano" description="" copyright="" comment="" customnodeid="" latitude="" info="" title="" datetime="2019:06:11 16:42:52"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label background="1" textcolor="0x000000" bordercolor="0x000000" border="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" width="180" height="20" backgroundalpha="1" textalpha="1" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0"/>
+      <hotspot pan="-218.73" skinid="ht_node" url="{node3}" tilt="-4.39" description="" target="164.4/-5.1/100.0" title="" id="Point01"/>
+      <hotspot pan="-38.39" skinid="ht_node" url="{node5}" tilt="-0.15" description="" target="24.1/2.2/100.0" title="" id="Point02"/>
+      <hotspot pan="-327.14" skinid="ht_url" url="http://www.oaokatun.ru/food/restoran-rybnoe-mesto-korabl" tilt="1.27" description="" target="_blank" title="Ресторан &quot;Рыбное место&quot;" id="Point03"/>
+      <hotspot pan="-134.3" skinid="ht_url" url="https://dm-centre.ru/kvantorium" tilt="-87.14" description="" target="_blank" title="Кванториум г. Екатеринбурга" id="Point04"/>
+      <hotspot pan="-7.38" skinid="ht_info" url="" tilt="4.64" description="В каждом номере: 2 лоджии, несколько комнат, новая мебель, ТВ, холодильник, чайник, душевая, санузел. При необходимости предоставляется детская кроватка.&#xa;Территория и услуги: ухоженный сад, общая терраса, двухэтажная беседка с принадлежностями для барбекю, мангалом.  В скором времени появится сауна.&#xa;Питание: На территории гостевого дома есть зона для барбекю, мангал. Все кафе и рестораны «Бирюзовой Катуни» находятся поблизости." target="" title="Гостевой дом «Теремъ»" id="Point05"/>
+      <hotspot pan="-347.12" skinid="ht_url" url="http://www.oaokatun.ru/accommodation/kottedzh-buhta" tilt="4.57" description="" target="_blank" title="Отель &quot;Бухта&quot;" id="Point06"/>
+      <hotspot pan="-24.19" skinid="ht_image" url="images/47-7.jpg" tilt="4.57" description="" target="_blank" title="Аквапарк &quot;Бирюзовая Катунь&quot;" id="Point07"/>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" blendcolor="0x000000" enabled="1" zoomoutpause="1" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" blendtime="1" type="crossdissolve"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+    <control simulatemass="1" lockedmouse="0" dblclickfullscreen="0" lockedkeyboard="0" contextprojections="0" hideabout="0" speedwheel="1" lockedwheel="0" invertwheel="0" invertcontrol="1" lockedkeyboardzoom="0" sensitivity="8" contextfullscreen="1" rubberband="0"/>
+  </panorama>
+  <panorama id="node5">
+    <input levelbias="0.400" overlap="1" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0" width="1920" height="1920">
+      <level predecode="0" width="1920" height="1920" preload="0"/>
+      <level predecode="0" width="960" height="960" preload="0"/>
+      <level predecode="1" width="480" height="480" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" tilt="0" fov="100" projection="4"/>
+      <flyin pan="0" tilt="-90" fov="170" projection="9"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovfisheye="360" pan="360" scaletofit="1" fovstereographic="270" tilt="90" fov="120"/>
+    </view>
+    <userdata longitude="" source="" author="" tags="pano" description="" copyright="" comment="" customnodeid="" latitude="" info="" title="" datetime="2019:06:11 16:45:00"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label background="1" textcolor="0x000000" bordercolor="0x000000" border="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" width="180" height="20" backgroundalpha="1" textalpha="1" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0"/>
+      <hotspot pan="-331.89" skinid="ht_node" url="{node6}" tilt="1.48" description="" target="49.1/-3.7/100.0" title="" id="Point01"/>
+      <hotspot pan="-161.64" skinid="ht_node" url="{node4}" tilt="-2.2" description="" target="133.4/-5.1/100.0" title="" id="Point02"/>
+      <hotspot pan="-216.04" skinid="ht_url" url="http://www.oaokatun.ru/food/restoran-rybnoe-mesto-korabl" tilt="0.32" description="" target="_blank" title="Ресторан &quot;Рыбное место&quot;" id="Point03"/>
+      <hotspot pan="-42.85" skinid="ht_url" url="https://dm-centre.ru/kvantorium" tilt="-88.97" description="" target="_blank" title="Кванториум г. Екатеринбурга" id="Point04"/>
+      <hotspot pan="-241.28" skinid="ht_url" url="http://www.oaokatun.ru/accommodation/kottedzh-buhta" tilt="4.12" description="" target="_blank" title="Отель &quot;Бухта&quot;" id="Point05"/>
+      <hotspot pan="-262.23" skinid="ht_url" url="" tilt="5.67" description="В каждом номере: 2 лоджии, несколько комнат, новая мебель, ТВ, холодильник, чайник, душевая, санузел. При необходимости предоставляется детская кроватка.&#xa;Территория и услуги: ухоженный сад, общая терраса, двухэтажная беседка с принадлежностями для барбекю, мангалом.  В скором времени появится сауна.&#xa;Питание: На территории гостевого дома есть зона для барбекю, мангал. Все кафе и рестораны «Бирюзовой Катуни» находятся поблизости." target="_blank" title="Гостевой дом «Теремъ»" id="Point06"/>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" blendcolor="0x000000" enabled="1" zoomoutpause="1" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" blendtime="1" type="crossdissolve"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+    <control simulatemass="1" lockedmouse="0" dblclickfullscreen="0" lockedkeyboard="0" contextprojections="0" hideabout="0" speedwheel="1" lockedwheel="0" invertwheel="0" invertcontrol="1" lockedkeyboardzoom="0" sensitivity="8" contextfullscreen="1" rubberband="0"/>
+  </panorama>
+  <panorama id="node6">
+    <input levelbias="0.400" overlap="1" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0" width="1920" height="1920">
+      <level predecode="0" width="1920" height="1920" preload="0"/>
+      <level predecode="0" width="960" height="960" preload="0"/>
+      <level predecode="1" width="480" height="480" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" tilt="0" fov="100" projection="4"/>
+      <flyin pan="0" tilt="-90" fov="170" projection="9"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovfisheye="360" pan="360" scaletofit="1" fovstereographic="270" tilt="90" fov="120"/>
+    </view>
+    <userdata longitude="" source="" author="" tags="pano" description="" copyright="" comment="" customnodeid="" latitude="" info="" title="" datetime="2019:06:11 16:47:07"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label background="1" textcolor="0x000000" bordercolor="0x000000" border="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" width="180" height="20" backgroundalpha="1" textalpha="1" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0"/>
+      <hotspot pan="-112.43" skinid="ht_node" url="{node5}" tilt="0.02" description="" target="-167.6/-2.6/100.0" title="" id="Point01"/>
+      <hotspot pan="-296.63" skinid="ht_node" url="{node7}" tilt="-1.24" description="" target="-165.6/4.0/100.0" title="" id="Point02"/>
+      <hotspot pan="-87.77" skinid="ht_url" url="https://dm-centre.ru/kvantorium" tilt="-87.24" description="" target="_blank" title="Кванториум г. Екатеринбурга" id="Point03"/>
+      <hotspot pan="-163.26" skinid="ht_url" url="http://www.oaokatun.ru/accommodation/kottedzh-buhta" tilt="7.01" description="" target="_blank" title="Отель &quot;Бухта&quot;" id="Point04"/>
+      <hotspot pan="-330.63" skinid="ht_image" url="images/IMG_0732.jpg" tilt="-6.09" description="" target="" title="Бурундук" id="Point05"/>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" blendcolor="0x000000" enabled="1" zoomoutpause="1" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" blendtime="1" type="crossdissolve"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+    <control simulatemass="1" lockedmouse="0" dblclickfullscreen="0" lockedkeyboard="0" contextprojections="0" hideabout="0" speedwheel="1" lockedwheel="0" invertwheel="0" invertcontrol="1" lockedkeyboardzoom="0" sensitivity="8" contextfullscreen="1" rubberband="0"/>
+  </panorama>
+  <panorama id="node7">
+    <input levelbias="0.400" overlap="1" leveltileurl="tiles/node7/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" leveltilesize="510" levelbiashidpi="1.000" levelingroll="0" width="1920" height="1920">
+      <level predecode="0" width="1920" height="1920" preload="0"/>
+      <level predecode="0" width="960" height="960" preload="0"/>
+      <level predecode="1" width="480" height="480" preload="1"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" tilt="0" fov="100" projection="4"/>
+      <flyin pan="0" tilt="-90" fov="170" projection="9"/>
+      <min pan="0" tilt="-90" fovpixel="2"/>
+      <max fovfisheye="360" pan="360" scaletofit="1" fovstereographic="270" tilt="90" fov="120"/>
+    </view>
+    <userdata longitude="" source="" author="" tags="pano" description="" copyright="" comment="" customnodeid="" latitude="" info="" title="" datetime="2019:06:11 16:48:37"/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label background="1" textcolor="0x000000" bordercolor="0x000000" border="1" borderalpha="1" enabled="1" backgroundcolor="0xffffff" borderradius="1" width="180" height="20" backgroundalpha="1" textalpha="1" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" handcursor="1" backgroundcolor="0x0000ff" backgroundalpha="0.25098" mode="0"/>
+      <hotspot pan="-39.14" skinid="ht_node" url="{node6}" tilt="-2.54" description="" target="-116.8/1.7/100.0" title="" id="Point01"/>
+      <hotspot pan="-146.76" skinid="ht_url" url="https://dm-centre.ru/kvantorium" tilt="-83.56" description="" target="_blank" title="Кванториум г. Екатеринбурга" id="Point02"/>
+      <hotspot pan="-69.04" skinid="ht_url" url="http://www.oaokatun.ru/accommodation/kottedzh-buhta" tilt="3.15" description="" target="_blank" title="Отель &quot;Бухта&quot;" id="Point03"/>
+      <hotspot pan="-82.63" skinid="ht_url" url="http://www.oaokatun.ru/accommodation/gostevoj-dom-terem" tilt="5.48" description="" target="_blank" title="Гостевой дом «Теремъ»" id="Point04"/>
+      <hotspot pan="-65.82" skinid="ht_url" url="http://www.oaokatun.ru/food/restoran-usadba-sarzhevskih" tilt="3.23" description="" target="_blank" title="Ресторан «Усадьба Саржевских»" id="Point05"/>
+      <hotspot pan="-124.84" skinid="ht_image" url="images/47-7.jpg" tilt="7.52" description="" target="" title="Аквапарк &quot;Бирюзовая Катунь&quot;" id="Point06"/>
+      <hotspot pan="-98.22" skinid="ht_image" url="images/2343_22039.png" tilt="5.58" description="" target="" title="" id="Point07"/>
+    </hotspots>
+    <media/>
+    <transition zoomout="0" blendcolor="0x000000" enabled="1" zoomoutpause="1" softedge="0" zoomspeed="2" zoomfov="20" zoomin="0" blendtime="1" type="crossdissolve"/>
+    <animation useinautorotation="0" animsequence="Animation01" syncanimationwithvideo="0"/>
+    <control simulatemass="1" lockedmouse="0" dblclickfullscreen="0" lockedkeyboard="0" contextprojections="0" hideabout="0" speedwheel="1" lockedwheel="0" invertwheel="0" invertcontrol="1" lockedkeyboardzoom="0" sensitivity="8" contextfullscreen="1" rubberband="0"/>
+  </panorama>
+  <masternode>
+    <userdata longitude="" source="" author="" tags="" description="" copyright="" comment="" customnodeid="" latitude="" info="" title="" datetime=""/>
+  </masternode>
+</tour>
