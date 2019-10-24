@@ -23,9 +23,12 @@ class ShareFragment : Fragment() {
             ViewModelProviders.of(this).get(ShareViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_share, container, false)
 
+        val webViewer: WebView = root.findViewById(R.id.share_web)
+        webViewer.settings.javaScriptEnabled = true
+        webViewer.settings.allowFileAccessFromFileURLs = true
 
         shareViewModel.text.observe(this, Observer {
-
+            webViewer.loadUrl("http://дткванториум.рф/barnaul/Hackaton")
         })
         return root
     }

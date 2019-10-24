@@ -4,7 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.JsResult
+import android.webkit.WebChromeClient
 import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -21,15 +24,19 @@ class HomeFragment : Fragment() {
     ): View? {
         homeViewModel =  ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-       val webViewer: WebView = root.findViewById(R.id.webViewer)
-      //  WebView.
-       //
-        homeViewModel.text.observe(this, Observer {
-            webViewer.loadUrl("altair/index.html")
+
+        //val webViewer: WebView = root.findViewById(R.id.webViewer)
+       // webViewer.settings.javaScriptEnabled = true
+       // webViewer.settings.allowFileAccessFromFileURLs = true
+
+
+       homeViewModel.text.observe(this, Observer {
+
+            //webViewer.loadUrl("file:///android_asset/altair/index.html")
+
+
+
         })
-
-        //idos.setVideoURI(Uri.parse("https://www.youtube.com/watch?v=wn7mLsnsXe4"))
-
         return root
     }
 }
