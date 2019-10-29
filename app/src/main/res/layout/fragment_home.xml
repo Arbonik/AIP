@@ -4,15 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<ImageView
-    android:src="@drawable/katunmap"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
-<!--    <WebView-->
-<!--        android:id="@+id/webViewer"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--android:background="@color/colorAccent"-->
-<!--        />-->
+<!--<ImageView-->
+<!--    android:src="@drawable/katunmap"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"/>-->
+    <WebView
+        android:id="@+id/webViewer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:background="@color/colorAccent"
+        
+        />
 
 </LinearLayout>

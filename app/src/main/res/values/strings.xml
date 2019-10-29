@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VrAr</string>
+    <string name="app_name">AIP</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -8,12 +8,12 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Place</string>
-    <string name="menu_gallery">Place</string>
-    <string name="menu_slideshow">Place</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Нулевой километр</string>
+    <string name="menu_slideshow">Чудеса природы и культуры</string>
     <string name="menu_tools">Place</string>
-    <string name="menu_share">Place</string>
-    <string name="menu_send">Place</string>
-    <string name="menu_test">Place test</string>
+    <string name="menu_share">Памятник Николаю Рериху</string>
+    <string name="menu_send">Тавдинская Пещера</string>
+    <string name="menu_test">Пещерный комплекс</string>
 
 </resources>
