@@ -28,12 +28,15 @@ class HomeFragment : Fragment() {
         val webViewer: WebView = root.findViewById(R.id.webViewer)
         webViewer.settings.javaScriptEnabled = true
         webViewer.settings.allowFileAccessFromFileURLs = true
-
-
+        webViewer.settings.allowFileAccess = true
+        webViewer.settings.builtInZoomControls = true
+        webViewer.settings.useWideViewPort = true
+        webViewer.settings.loadWithOverviewMode = true
        homeViewModel.text.observe(this, Observer {
 
             //webViewer.loadUrl("file:///android_asset/altair/index.html")
-           webViewer.loadUrl("file:///android_asset/kartaPustaya.png")
+           webViewer.loadUrl("file:///android_asset/htmls/home.html")
+
         })
         return root
     }

@@ -9,11 +9,11 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Нулевой километр</string>
-    <string name="menu_slideshow">Чудеса природы и культуры</string>
+    <string name="menu_null">Нулевой километр</string>
+    <string name="menu_chudesa">Чудеса природы и культуры</string>
     <string name="menu_tools">Place</string>
-    <string name="menu_share">Памятник Николаю Рериху</string>
-    <string name="menu_send">Тавдинская Пещера</string>
-    <string name="menu_test">Пещерный комплекс</string>
+    <string name="menu_nikolay">Памятник Николаю Рериху</string>
+    <string name="menu_tavd_cave">Тавдинская Пещера</string>
+    <string name="menu_cave">Пещерный комплекс</string>
 
 </resources>
