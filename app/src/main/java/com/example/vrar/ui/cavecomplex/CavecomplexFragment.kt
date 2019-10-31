@@ -1,4 +1,4 @@
-package com.example.vrar.ui.slideshow
+package com.example.vrar.ui.cavecomplex
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,9 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.vrar.R
 
-class SlideshowFragment : Fragment() { // altair
+class CavecomplexFragment : Fragment() { // altair
 
-    private lateinit var slideshowViewModel: SlideshowViewModel
+    private lateinit var slideshowViewModel: CavecomplexViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -20,10 +20,10 @@ class SlideshowFragment : Fragment() { // altair
         savedInstanceState: Bundle?
     ): View? {
         slideshowViewModel =
-            ViewModelProviders.of(this).get(SlideshowViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_altair, container, false)
+            ViewModelProviders.of(this).get(CavecomplexViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_cavecomplex, container, false)
 
-        var webView : WebView = root.findViewById(R.id.altair_show)
+        var webView : WebView = root.findViewById(R.id.webViewer)
 
         webView.settings.javaScriptEnabled = true
         webView.settings.allowFileAccessFromFileURLs = true

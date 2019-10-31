@@ -11,15 +11,15 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/yeloow_point_24dp"
-            android:title="@string/app_name" />
+            android:title="@string/menu_nikolay" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/orange_point_24dp"
-            android:title="@string/app_name" />
+            android:title="@string/menu_altair" />
         <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/purple_point_24dp"
-            android:title="@string/menu_tools" />
+            android:title="@string/menu_cavemap" />
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/green_poit_24dp"
@@ -27,13 +27,11 @@
         <item
             android:id="@+id/nav_send"
             android:icon="@drawable/cyan_point_24dp"
-            android:title="@string/app_name" />
+            android:title="@string/menu_villiage" />
+        <item
+            android:id="@+id/nav"
+            android:icon="@drawable/cyan_point_24dp"
+            android:title="@string/menu_villiage" />
     </group>
-
-    <item android:title="Communicate">
-        <menu>
-
-        </menu>
-    </item>
 
 </menu>

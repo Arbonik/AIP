@@ -1,4 +1,4 @@
-package com.example.vrar.ui.share
+package com.example.vrar.ui.dtqvant
 
 import android.os.Bundle
 import android.view.LayoutInflater

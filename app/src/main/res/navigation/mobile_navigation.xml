@@ -13,31 +13,37 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.vrar.ui.gallery.GalleryFragment"
+        android:name="com.example.vrar.ui.rerich.GalleryFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_rerich" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.example.vrar.ui.slideshow.SlideshowFragment"
+        android:name="com.example.vrar.ui.altayir.SlideshowFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_altair" />
 
     <fragment
         android:id="@+id/nav_tools"
-        android:name="com.example.vrar.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:name="com.example.vrar.ui.cavemap.ToolsFragment"
+        android:label="@string/menu_cavemap"
+        tools:layout="@layout/fragment_cave" />
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.vrar.ui.share.ShareFragment"
+        android:name="com.example.vrar.ui.dtqvant.ShareFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.vrar.ui.send.SendFragment"
+        android:name="com.example.vrar.ui.viliage.SendFragment"
         android:label="@string/app_name"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/fragment_villiage" />
+
+    <fragment
+        android:id="@+id/nav_cc"
+        android:name="com.example.vrar.ui.cavecomplex.CavecomplexFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_cavecomplex" />
 </navigation>

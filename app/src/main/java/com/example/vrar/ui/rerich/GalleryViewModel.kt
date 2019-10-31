@@ -1,13 +1,13 @@
-package com.example.vrar.ui.send
+package com.example.vrar.ui.rerich
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SendViewModel : ViewModel() {
+class GalleryViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is send Fragment"
+        value = "This is gallery Fragment"
     }
     val text: LiveData<String> = _text
 }
