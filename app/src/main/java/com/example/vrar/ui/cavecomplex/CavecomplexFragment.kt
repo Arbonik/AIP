@@ -12,14 +12,14 @@ import com.example.vrar.R
 
 class CavecomplexFragment : Fragment() { // altair
 
-    private lateinit var slideshowViewModel: CavecomplexViewModel
+    private lateinit var cavecomplexViewModel: CavecomplexViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        slideshowViewModel =
+        cavecomplexViewModel =
             ViewModelProviders.of(this).get(CavecomplexViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_cavecomplex, container, false)
 
@@ -31,7 +31,7 @@ class CavecomplexFragment : Fragment() { // altair
 //        webView.settings.builtInZoomControls = true
 //        webView.settings.useWideViewPort = true
 //        webView.settings.loadWithOverviewMode = true
-        slideshowViewModel.text.observe(this, Observer {
+        cavecomplexViewModel.text.observe(this, Observer {
            webView.loadUrl("file:///android_asset/altair/index.html")
         })
         return root

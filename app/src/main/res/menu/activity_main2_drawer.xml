@@ -4,6 +4,8 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/red_point_24dp"
@@ -12,6 +14,8 @@
             android:id="@+id/nav_gallery"
             android:icon="@drawable/yeloow_point_24dp"
             android:title="@string/menu_nikolay" />
+    </group>
+    <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/orange_point_24dp"
@@ -23,7 +27,7 @@
         <item
             android:id="@+id/nav_share"
             android:icon="@drawable/green_poit_24dp"
-            android:title="@string/menu_chudesa" />
+            android:title="@string/app_name" />
         <item
             android:id="@+id/nav_send"
             android:icon="@drawable/cyan_point_24dp"
@@ -32,6 +36,8 @@
             android:id="@+id/nav"
             android:icon="@drawable/cyan_point_24dp"
             android:title="@string/menu_villiage" />
-    </group>
+
+</group>
+
 
 </menu>
