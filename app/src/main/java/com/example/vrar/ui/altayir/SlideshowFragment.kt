@@ -27,10 +27,6 @@ class SlideshowFragment : Fragment() { // altair
 
         webView.settings.javaScriptEnabled = true
         webView.settings.allowFileAccessFromFileURLs = true
-//        webView.settings.allowFileAccess = true
-//        webView.settings.builtInZoomControls = true
-//        webView.settings.useWideViewPort = true
-//        webView.settings.loadWithOverviewMode = true
         slideshowViewModel.text.observe(this, Observer {
            webView.loadUrl("file:///android_asset/altair/index.html")
         })

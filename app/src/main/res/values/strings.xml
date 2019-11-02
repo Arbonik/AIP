@@ -17,4 +17,9 @@
     <string name="menu_cave">Пещерный комплекс</string>
     <string name="menu_villiage">Усадьба Саржевских</string>
 
+    <string name="diff_panorams">Панорамы 360</string>
+    <string name="diff_maps">Карты</string>
+    <string name="diff_tours">3D туры</string>
+    <string name="diff_authors">Авторы материалов</string>
+
 </resources>
