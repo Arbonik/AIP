@@ -22,4 +22,25 @@
     <string name="diff_tours">3D туры</string>
     <string name="diff_authors">Авторы материалов</string>
 
+    <array name="teams">
+        <item>Горькие</item>
+        <item>Озерники</item>
+        <item>Альтаир</item>
+        <item>Открытый космос</item>
+        <item>Varapaparam</item>
+        <item>Команда Ы</item>
+        <item>ГеоНК</item>
+        <item>ГеоTeam</item>
+    </array>
+
+    <string name="team_name_gorkie">Горькие</string>
+    <string name="team_name_ozerniki">Озерники</string>
+    <string name="team_name_altair">Альтаир</string>
+    <string name="team_name_open_space">Открытый космос</string>
+    <string name="team_name_varapaz">Varapaparam</string>
+    <string name="team_name_team_s">Команда Ы</string>
+    <string name="team_name_geoNK">ГеоНК</string>
+    <string name="team_name_geoTeam">ГеоTeam</string>
+
+
 </resources>

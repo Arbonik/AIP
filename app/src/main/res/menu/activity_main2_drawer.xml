@@ -54,9 +54,12 @@
         </menu>
 
     </item>
-
-        <item android:title="@string/diff_authors">
+        <item android:title="О проекте">
             <menu>
+                <item
+                    android:id="@+id/nav_authors"
+                    android:icon="@drawable/cyan_point_24dp"
+                    android:title="@string/diff_authors"/>
             </menu>
         </item>
 </group>

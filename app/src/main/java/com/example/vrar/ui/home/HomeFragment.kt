@@ -4,7 +4,9 @@ import android.content.Context
 import android.graphics.*
 import android.os.Bundle
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.JsResult
@@ -31,6 +33,15 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val img :MView = root.findViewById(R.id.map)
 
+        img.setOnTouchListener(object : View.OnTouchListener {
+            override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
+                if (p1?.action == MotionEvent.ACTION_DOWN) {
+                    img.checkOnTouch(PointF(p1.x, p1.y))
+                    Log.d("COORDS", "${p1.x}, ${p1.y}")
+                }
+                return true
+            }
+        })
 //        val webViewer: WebView = root.findViewById(R.id.webViewer)
 //        webViewer.settings.javaScriptEnabled = true
 //        webViewer.settings.allowFileAccessFromFileURLs = true
@@ -40,7 +51,6 @@ class HomeFragment : Fragment() {
 //
       //  webViewer.settings.loadWithOverviewMode = true
         // webViewer.settings.builtInZoomControls = false
-
         homeViewModel.text.observe(this, Observer {
          //  webViewer.loadUrl("file:///android_asset/htmls/home.html")
 
@@ -49,39 +59,50 @@ class HomeFragment : Fragment() {
     }
 }
 
-class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, attributeSet){
+class MView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet){
     val h1 = 967f
     val w1 = 1582f // оригинальные размеры карты
     var h2 = 0f
     var w2 = 0f // размеры холста
-    var suka = true
-    val rMarks = 30f
+    var first = true
     var paint = Paint()
     var pointsMap : Array<PointOnMap> = arrayOf(
-        PointOnMap(PointF(522f,225f),"Нулевой километр", Color.YELLOW),
+        PointOnMap(PointF(532f,225f),"Нулевой километр", Color.YELLOW),
         PointOnMap(PointF(524f,320f),"Нулевой километр", Color.MAGENTA),
-        PointOnMap(PointF(1322f,314f),"Нулевой километр", Color.RED)
-
+        PointOnMap(PointF(1322f,314f),"Нулевой километр", Color.RED),
+        PointOnMap(PointF(690f,440f),"Нулевой километр", Color.RED),
+        PointOnMap(PointF(739f,493f),"Нулевой километр", Color.RED),
+        PointOnMap(PointF(417f,540f),"Нулевой километр", Color.RED),
+        PointOnMap(PointF(479f,585f),"Нулевой километр", Color.RED),
+        PointOnMap(PointF(1023f,770f),"Нулевой километр", Color.RED),
+        PointOnMap(PointF(1234f,782f),"Нулевой километр", Color.RED),
+        PointOnMap(PointF(1158f,870f),"Нулевой километр", Color.RED)
     )
 
+    override fun performClick(): Boolean {
+        return super.performClick()
+    }
+
+    fun checkOnTouch(pointF: PointF){
+    for (i in pointsMap)
+        i.put(pointF)
+    }
 
     override fun onDraw(canvas: Canvas) {
 
         super.onDraw(canvas)
-        if (suka){
+        if (first){
             h2 = canvas.height.toFloat()
             w2 = canvas.width.toFloat()
             initialize()
-            suka = !suka
+            first = !first
         }
 
         for (i in (0..pointsMap.size - 1)){
-
             paint.color = pointsMap[i].color
-            paint.textSize = 30f
-            canvas.drawCircle(pointsMap[i].point.x, pointsMap[i].point.y, rMarks, paint)
-            canvas.drawText(pointsMap[i].text, pointsMap[i].point.x, pointsMap[i].point.y, paint)
+            paint.textSize = 60f
             invalidate()
+            pointsMap[i].draw(canvas, paint)
         }
     }
 

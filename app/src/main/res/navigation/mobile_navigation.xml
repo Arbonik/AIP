@@ -46,5 +46,10 @@
         android:name="com.example.vrar.ui.cavecomplex.CavecomplexFragment"
         android:label="@string/app_name"
         tools:layout="@layout/fragment_cavecomplex" />
+    <fragment
+        android:id="@+id/nav_authors"
+        android:name="com.example.vrar.ui.authors.AuthorsFragment"
+        android:label="@string/diff_authors"
+        tools:layout="@layout/fragmen_authors"/>
 
 </navigation>
