@@ -60,20 +60,20 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     var first = true
     var paint = Paint()
     var pointsMap : Array<PointOnMap> = arrayOf(
-        PointOnMap(PointF(532f,225f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(524f,320f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(1322f,314f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(690f,440f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(739f,493f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(417f,540f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(479f,585f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(1023f,770f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(1234f,782f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(1158f,870f),"Нулевой километр", randomColor())
+        PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), randomColor()),
+        PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), randomColor()),
+        PointOnMap(PointF(1322f,314f),resources.getString(R.string.menu_nikolay), randomColor()),
+        PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), randomColor()),
+//        PointOnMap(PointF(739f,493f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(417f,540f),resources.getString(R.string.menu_villiage), randomColor()),
+        PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage), randomColor()),
+        PointOnMap(PointF(1023f,770f),resources.getString(R.string.menu_cavemap), randomColor()),
+        PointOnMap(PointF(1234f,782f),resources.getString(R.string.menu_chudesa), randomColor()),
+        PointOnMap(PointF(1158f,870f),resources.getString(R.string.menu_cave), randomColor())
     )
 
     fun randomColor():Int{
-        return (Color.rgb((1..255).random(), (1..100).random(),(1..255).random()))
+        return (Color.rgb((100..255).random(), (100..255).random(),(100..255).random()))
     }
 
     override fun performClick(): Boolean {

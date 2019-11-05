@@ -11,11 +11,13 @@ class PointOnMap(centr : PointF, text: String, color : Int) {
     var point :PointF = centr
     var color : Int = color
     var text : String = text
+    var active = false
 
     fun draw(canvas :Canvas,paint : Paint){
         paint.color = color
         canvas.drawCircle(point.x, point.y, rMarks, paint)
         paint.color = Color.BLACK
+        if (active)
         canvas.drawText(text,point.x + rMarks,point.y + rMarks / 2, paint)
     }
     fun put(pointF: PointF){
@@ -25,6 +27,6 @@ class PointOnMap(centr : PointF, text: String, color : Int) {
         }
     }
     fun activate(){
-
+       active = !active
     }
 }
