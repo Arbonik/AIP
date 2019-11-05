@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.vrar.R
 
-class ShareFragment : Fragment() {
+class ChudesaFragment : Fragment() {
 
 
     override fun onCreateView(

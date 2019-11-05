@@ -31,16 +31,13 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val img :MView = root.findViewById(R.id.map)
 
-        img.setOnTouchListener(object : View.OnTouchListener {
-            override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
-
-                if (p1?.action == MotionEvent.ACTION_DOWN) {
-                    img.checkOnTouch(PointF(p1.x, p1.y))
-                    Log.d("COORDS", "${p1.x}, ${p1.y}")
-                }
-                return true
+        img.setOnTouchListener { p0, p1 ->
+            if (p1?.action == MotionEvent.ACTION_DOWN) {
+                img.checkOnTouch(PointF(p1.x, p1.y))
+                Log.d("COORDS", "${p1.x}, ${p1.y}")
             }
-        })
+            true
+        }
 //        val webViewer: WebView = root.findViewById(R.id.webViewer)
 //        webViewer.settings.javaScriptEnabled = true
 //        webViewer.settings.allowFileAccessFromFileURLs = true
@@ -63,25 +60,32 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     var first = true
     var paint = Paint()
     var pointsMap : Array<PointOnMap> = arrayOf(
-        PointOnMap(PointF(532f,225f),"Нулевой километр", Color.YELLOW),
-        PointOnMap(PointF(524f,320f),"Нулевой километр", Color.MAGENTA),
-        PointOnMap(PointF(1322f,314f),"Нулевой километр", Color.RED),
-        PointOnMap(PointF(690f,440f),"Нулевой километр", Color.RED),
-        PointOnMap(PointF(739f,493f),"Нулевой километр", Color.RED),
-        PointOnMap(PointF(417f,540f),"Нулевой километр", Color.RED),
-        PointOnMap(PointF(479f,585f),"Нулевой километр", Color.RED),
-        PointOnMap(PointF(1023f,770f),"Нулевой километр", Color.RED),
-        PointOnMap(PointF(1234f,782f),"Нулевой километр", Color.RED),
-        PointOnMap(PointF(1158f,870f),"Нулевой километр", Color.RED)
+        PointOnMap(PointF(532f,225f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(524f,320f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(1322f,314f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(690f,440f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(739f,493f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(417f,540f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(479f,585f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(1023f,770f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(1234f,782f),"Нулевой километр", randomColor()),
+        PointOnMap(PointF(1158f,870f),"Нулевой километр", randomColor())
     )
+
+    fun randomColor():Int{
+        return (Color.rgb((1..255).random(), (1..100).random(),(1..255).random()))
+    }
 
     override fun performClick(): Boolean {
         return super.performClick()
     }
 
     fun checkOnTouch(pointF: PointF){
-    for (i in pointsMap)
-        i.put(pointF)
+
+    for (i in (0..pointsMap.size - 1)) {
+        pointsMap[i].put(pointF)
+
+    }
     }
 
     override fun onDraw(canvas: Canvas) {

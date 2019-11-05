@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.vrar.R
 
-class GalleryFragment : Fragment() {
+class RerichFragment : Fragment() {
 
 
     override fun onCreateView(

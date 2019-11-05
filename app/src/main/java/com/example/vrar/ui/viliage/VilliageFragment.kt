@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.vrar.R
 
-class SendFragment : Fragment() {
+class VilliageFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,

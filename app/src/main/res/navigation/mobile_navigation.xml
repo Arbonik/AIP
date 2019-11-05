@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.vrar.ui.rerich.GalleryFragment"
+        android:name="com.example.vrar.ui.rerich.RerichFragment"
         android:label="@string/menu_nikolay"
         tools:layout="@layout/fragment_rerich" />
 
@@ -31,13 +31,13 @@
 
     <fragment
         android:id="@+id/nav_share"
-        android:name="com.example.vrar.ui.dtqvant.ShareFragment"
+        android:name="com.example.vrar.ui.dtqvant.ChudesaFragment"
         android:label="@string/menu_chudesa"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="com.example.vrar.ui.viliage.SendFragment"
+        android:name="com.example.vrar.ui.viliage.VilliageFragment"
         android:label="@string/menu_villiage"
         tools:layout="@layout/fragment_villiage" />
 
