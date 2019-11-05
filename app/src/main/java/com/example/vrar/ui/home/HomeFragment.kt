@@ -22,14 +22,13 @@ import com.example.vrar.R
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =  ViewModelProviders.of(this).get(HomeViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val img :MView = root.findViewById(R.id.map)
 
@@ -51,10 +50,7 @@ class HomeFragment : Fragment() {
 //
       //  webViewer.settings.loadWithOverviewMode = true
         // webViewer.settings.builtInZoomControls = false
-        homeViewModel.text.observe(this, Observer {
-         //  webViewer.loadUrl("file:///android_asset/htmls/home.html")
 
-        })
         return root
     }
 }
