@@ -22,7 +22,6 @@ import com.example.vrar.R
 
 class HomeFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,6 +33,7 @@ class HomeFragment : Fragment() {
 
         img.setOnTouchListener(object : View.OnTouchListener {
             override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
+
                 if (p1?.action == MotionEvent.ACTION_DOWN) {
                     img.checkOnTouch(PointF(p1.x, p1.y))
                     Log.d("COORDS", "${p1.x}, ${p1.y}")

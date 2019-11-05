@@ -12,15 +12,13 @@ import com.example.vrar.R
 
 class ToolsFragment : Fragment() {
 
-    private lateinit var toolsViewModel: ToolsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        toolsViewModel =
-            ViewModelProviders.of(this).get(ToolsViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_cave, container, false)
 
         var web: WebView = root.findViewById(R.id.cave_show)
@@ -31,10 +29,8 @@ class ToolsFragment : Fragment() {
         web.settings.builtInZoomControls = true
         web.settings.useWideViewPort = true
         web.settings.loadWithOverviewMode = true
+        web.loadUrl("file:///android_asset/htmls/cavemap.html")
 
-        toolsViewModel.text.observe(this, Observer {
-            web.loadUrl("file:///android_asset/htmls/cavemap.html")
-        })
         return root
     }
 }

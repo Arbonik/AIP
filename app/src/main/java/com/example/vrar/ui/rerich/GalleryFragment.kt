@@ -13,15 +13,13 @@ import com.example.vrar.R
 
 class GalleryFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        galleryViewModel =
-            ViewModelProviders.of(this).get(GalleryViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_rerich, container, false)
         val webV: WebView = root.findViewById(R.id.rerich_show)
         webV.settings.javaScriptEnabled = true
@@ -31,9 +29,8 @@ class GalleryFragment : Fragment() {
         webV.settings.useWideViewPort = true
         webV.settings.loadWithOverviewMode = true
 
-        galleryViewModel.text.observe(this, Observer {
             webV.loadUrl("file:///android_asset/htmls/rerich.html")
-        })
+
         return root
     }
 }

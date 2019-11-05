@@ -12,15 +12,13 @@ import com.example.vrar.R
 
 class CavecomplexFragment : Fragment() { // altair
 
-    private lateinit var cavecomplexViewModel: CavecomplexViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        cavecomplexViewModel =
-            ViewModelProviders.of(this).get(CavecomplexViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_cavecomplex, container, false)
 
         var webView : WebView = root.findViewById(R.id.webViewer)
@@ -29,9 +27,7 @@ class CavecomplexFragment : Fragment() { // altair
         webView.settings.allowFileAccessFromFileURLs = true
         webView.settings.loadWithOverviewMode = true
 
-        cavecomplexViewModel.text.observe(this, Observer {
-           webView.loadUrl("file:///android_asset/altair/index.html")
-        })
+        webView.loadUrl("file:///android_asset/htmls/cave_complex.html")
         return root
     }
 }

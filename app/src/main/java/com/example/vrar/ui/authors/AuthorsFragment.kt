@@ -15,16 +15,15 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vrar.R
-import com.example.vrar.ui.home.HomeViewModel
 
 class AuthorsFragment : Fragment() {
-    private lateinit var authorsViewModel: AuthorsViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        authorsViewModel = ViewModelProviders.of(this).get(AuthorsViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragmen_authors, container, false)
 
 

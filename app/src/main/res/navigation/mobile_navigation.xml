@@ -14,13 +14,13 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.vrar.ui.rerich.GalleryFragment"
-        android:label="@string/app_name"
+        android:label="@string/menu_nikolay"
         tools:layout="@layout/fragment_rerich" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.example.vrar.ui.altayir.SlideshowFragment"
-        android:label="@string/app_name"
+        android:label="@string/menu_altair"
         tools:layout="@layout/fragment_altair" />
 
     <fragment
@@ -32,19 +32,19 @@
     <fragment
         android:id="@+id/nav_share"
         android:name="com.example.vrar.ui.dtqvant.ShareFragment"
-        android:label="@string/app_name"
+        android:label="@string/menu_chudesa"
         tools:layout="@layout/fragment_share" />
 
     <fragment
         android:id="@+id/nav_send"
         android:name="com.example.vrar.ui.viliage.SendFragment"
-        android:label="@string/app_name"
+        android:label="@string/menu_villiage"
         tools:layout="@layout/fragment_villiage" />
 
     <fragment
         android:id="@+id/nav_cc"
         android:name="com.example.vrar.ui.cavecomplex.CavecomplexFragment"
-        android:label="@string/app_name"
+        android:label="@string/menu_cave"
         tools:layout="@layout/fragment_cavecomplex" />
     <fragment
         android:id="@+id/nav_authors"
