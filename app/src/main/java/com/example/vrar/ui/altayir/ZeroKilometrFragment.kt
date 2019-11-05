@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.vrar.R
 
-class SlideshowFragment : Fragment() { // altair
+class ZeroKilometrFragment : Fragment() { // altair
 
     override fun onCreateView(
         inflater: LayoutInflater,

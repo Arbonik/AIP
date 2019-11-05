@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.vrar.R
 
-class ToolsFragment : Fragment() {
+class CavemapFragment : Fragment() {
 
 
     override fun onCreateView(
