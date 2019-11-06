@@ -6,10 +6,11 @@ import android.graphics.Paint
 import android.graphics.PointF
 import android.util.Log
 
-class PointOnMap(centr : PointF, text: String, color : Int) {
+class PointOnMap(centr : PointF, text: String, navigate : Int) {
+    var navigate = navigate
     val rMarks = 30f
     var point :PointF = centr
-    var color : Int = color
+    var color : Int = Color.rgb((100..255).random(), (100..255).random(),(100..255).random())
     var text : String = text
     var active = false
 
@@ -28,5 +29,6 @@ class PointOnMap(centr : PointF, text: String, color : Int) {
     }
     fun activate(){
        active = !active
+
     }
 }

@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val img :MView = root.findViewById(R.id.map)
-        //val navController = findNavController(root)
+        val navController = findNavController(container!!.findViewById(R.id.nav_host_fragment))
 
         img.setOnTouchListener { p0, p1 ->
             if (p1?.action == MotionEvent.ACTION_DOWN) {
@@ -63,21 +63,17 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     var first = true
     var paint = Paint()
     var pointsMap : Array<PointOnMap> = arrayOf(
-        PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), randomColor()),
-        PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), randomColor()),
-        PointOnMap(PointF(1322f,314f),resources.getString(R.string.menu_nikolay), randomColor()),
-        PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), randomColor()),
+        PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), R.id.nav_slideshow),
+        PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), R.id.nav_slideshow),
+        PointOnMap(PointF(1322f,314f),resources.getString(R.string.menu_nikolay), R.id.nav_gallery),
+        PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), R.id.nav_slideshow),
 //        PointOnMap(PointF(739f,493f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(417f,540f),resources.getString(R.string.menu_villiage), randomColor()),
-        PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage), randomColor()),
-        PointOnMap(PointF(1023f,770f),resources.getString(R.string.menu_cavemap), randomColor()),
-        PointOnMap(PointF(1234f,782f),resources.getString(R.string.menu_chudesa), randomColor()),
-        PointOnMap(PointF(1158f,870f),resources.getString(R.string.menu_cave), randomColor())
+        PointOnMap(PointF(417f,540f),resources.getString(R.string.menu_villiage), R.id.nav_send),
+        PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage), R.id.nav_send),
+        PointOnMap(PointF(1023f,770f),resources.getString(R.string.menu_cavemap), R.id.nav_tools),
+        PointOnMap(PointF(1234f,782f),resources.getString(R.string.menu_chudesa), R.id.nav_share),
+        PointOnMap(PointF(1158f,870f),resources.getString(R.string.menu_cave), R.id.nav_cc)
     )
-
-    fun randomColor():Int{
-        return (Color.rgb((100..255).random(), (100..255).random(),(100..255).random()))
-    }
 
     override fun performClick(): Boolean {
         return super.performClick()
