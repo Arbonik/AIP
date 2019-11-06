@@ -9,15 +9,13 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.JsResult
-import android.webkit.WebChromeClient
-import android.webkit.WebView
-import android.webkit.WebViewClient
-import android.widget.ImageView
-import android.widget.Switch
+import androidx.navigation.findNavController
+
+
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
+
 import com.example.vrar.R
 
 class HomeFragment : Fragment() {
@@ -30,6 +28,7 @@ class HomeFragment : Fragment() {
 
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         val img :MView = root.findViewById(R.id.map)
+        //val navController = findNavController(root)
 
         img.setOnTouchListener { p0, p1 ->
             if (p1?.action == MotionEvent.ACTION_DOWN) {
@@ -38,6 +37,7 @@ class HomeFragment : Fragment() {
             }
             true
         }
+
 //        val webViewer: WebView = root.findViewById(R.id.webViewer)
 //        webViewer.settings.javaScriptEnabled = true
 //        webViewer.settings.allowFileAccessFromFileURLs = true
@@ -47,12 +47,15 @@ class HomeFragment : Fragment() {
 //
       //  webViewer.settings.loadWithOverviewMode = true
         // webViewer.settings.builtInZoomControls = false
+       // val navController = root.findNavController()
+       // navController.navigate(R.id.nav_cc)
 
         return root
     }
 }
 
 class MView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet){
+
     val h1 = 967f
     val w1 = 1582f // оригинальные размеры карты
     var h2 = 0f

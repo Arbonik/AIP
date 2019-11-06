@@ -1,12 +1,6 @@
 package com.example.vrar
 
-import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Paint
 import android.os.Bundle
-import android.util.AttributeSet
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -17,7 +11,7 @@ import com.google.android.material.navigation.NavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
-import android.webkit.WebView
+
 
 class Main2Activity : AppCompatActivity() {
 
@@ -52,6 +46,7 @@ class Main2Activity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main2, menu)
+
         return true
     }
 

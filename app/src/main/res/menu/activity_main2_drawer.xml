@@ -11,7 +11,7 @@
 
     <item android:title="@string/diff_panorams">
         <menu>
-
+            <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/yeloow_point_24dp"
@@ -24,6 +24,7 @@
             android:id="@+id/nav_share"
             android:icon="@drawable/green_poit_24dp"
             android:title="@string/menu_chudesa" />
+            </group>
 
         </menu>
     </item>
@@ -31,10 +32,12 @@
         <item android:title="@string/diff_tours">
 
             <menu>
+                <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_send"
                     android:icon="@drawable/cyan_point_24dp"
                     android:title="@string/menu_villiage" />
+                </group>
 
             </menu>
         </item>
@@ -42,6 +45,7 @@
 
     <item android:title="@string/diff_maps">
         <menu>
+            <group android:checkableBehavior="single">
             <item
             android:id="@+id/nav_tools"
             android:icon="@drawable/purple_point_24dp"
@@ -51,15 +55,18 @@
                 android:id="@+id/nav_cc"
                 android:icon="@drawable/cyan_point_24dp"
                 android:title="@string/menu_cave" />
+            </group>
         </menu>
 
     </item>
         <item android:title="О проекте">
             <menu>
+                <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_authors"
                     android:icon="@drawable/cyan_point_24dp"
                     android:title="@string/diff_authors"/>
+                </group>
             </menu>
         </item>
 </group>
