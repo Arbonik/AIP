@@ -32,7 +32,9 @@ class HomeFragment : Fragment() {
 
         img.setOnTouchListener { p0, p1 ->
             if (p1?.action == MotionEvent.ACTION_DOWN) {
-                img.checkOnTouch(PointF(p1.x, p1.y))
+                var intentPlace = img.checkOnTouch(PointF(p1.x, p1.y)) // получаем место, если пользователь нажал на кнопку 2 раз
+                if (intentPlace != null)
+                    navController.navigate(intentPlace?.navigate) // переходим на это место
                 Log.d("COORDS", "${p1.x}, ${p1.y}")
             }
             true
@@ -55,7 +57,6 @@ class HomeFragment : Fragment() {
 }
 
 class MView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet){
-
     val h1 = 967f
     val w1 = 1582f // оригинальные размеры карты
     var h2 = 0f
@@ -80,17 +81,18 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         return super.performClick()
     }
 
-    fun checkOnTouch(pointF: PointF):Boolean{
-        offActive()
-    for (i in (0..pointsMap.size - 1)) {
-        if(pointsMap[i].put(pointF))
-            return true
-    }
-        return false
+    fun checkOnTouch(pointF: PointF):PointOnMap?{
+        for (i in (0..pointsMap.size - 1)) {
+            if (pointsMap[i].put(pointF)){ // пользователь нажал на маркер
+                    if (pointsMap[i].clickOnMe == 2)
+                        return pointsMap[i]
+                offAllOther(pointsMap[i])
+            }
+        }
+        return null
     }
 
     override fun onDraw(canvas: Canvas) {
-
         super.onDraw(canvas)
         if (first){
             h2 = canvas.height.toFloat()
@@ -120,12 +122,12 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         }
     }
 
-    fun offActive(){
+    fun offAllOther(pon : PointOnMap?){
         for (i in pointsMap){
-            if (i.active) {
-                i.active = false
-            break
-            }
+            if (i == pon){}
+            else
+            i.disAcivated()
         }
+
     }
 }

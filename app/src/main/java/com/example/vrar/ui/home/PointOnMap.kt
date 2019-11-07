@@ -13,7 +13,7 @@ class PointOnMap(centr : PointF, text: String, navigate : Int) {
     var color : Int = Color.rgb((100..255).random(), (100..255).random(),(100..255).random())
     var text : String = text
     var active = false
-
+    var clickOnMe = 0
     fun draw(canvas :Canvas,paint : Paint){
         paint.color = color
         canvas.drawCircle(point.x, point.y, rMarks, paint)
@@ -29,8 +29,15 @@ class PointOnMap(centr : PointF, text: String, navigate : Int) {
         }
         return false
     }
-    fun activate(){
-       active = !active
 
+    fun activate(){
+        active = !active
+        ++clickOnMe
     }
+
+    fun disAcivated(){
+        active = false
+        clickOnMe = 0
+    }
+
 }
