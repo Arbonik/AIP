@@ -21,11 +21,13 @@ class PointOnMap(centr : PointF, text: String, navigate : Int) {
         if (active)
         canvas.drawText(text,point.x + rMarks,point.y + rMarks / 2, paint)
     }
-    fun put(pointF: PointF){
+    fun put(pointF: PointF):Boolean{
         if ((pointF.x <= point.x + rMarks) &&(pointF.x >= point.x - rMarks) &&
             (pointF.y <= point.y + rMarks) &&(pointF.y >= point.y - rMarks)) {
             activate()
+            return true
         }
+        return false
     }
     fun activate(){
        active = !active

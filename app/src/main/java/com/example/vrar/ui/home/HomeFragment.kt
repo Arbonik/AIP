@@ -62,6 +62,7 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     var w2 = 0f // размеры холста
     var first = true
     var paint = Paint()
+
     var pointsMap : Array<PointOnMap> = arrayOf(
         PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), R.id.nav_slideshow),
         PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), R.id.nav_slideshow),
@@ -79,12 +80,13 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         return super.performClick()
     }
 
-    fun checkOnTouch(pointF: PointF){
+    fun checkOnTouch(pointF: PointF):Boolean{
 
     for (i in (0..pointsMap.size - 1)) {
-        pointsMap[i].put(pointF)
-
+        if(pointsMap[i].put(pointF))
+            return true
     }
+        return false
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -117,4 +119,6 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
             i.point = PointF(cx(i.point.x), cy(i.point.y))
         }
     }
+
+    fun 
 }
