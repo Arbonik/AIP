@@ -81,7 +81,7 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     }
 
     fun checkOnTouch(pointF: PointF):Boolean{
-
+        offActive()
     for (i in (0..pointsMap.size - 1)) {
         if(pointsMap[i].put(pointF))
             return true
@@ -120,5 +120,12 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         }
     }
 
-    fun 
+    fun offActive(){
+        for (i in pointsMap){
+            if (i.active) {
+                i.active = false
+            break
+            }
+        }
+    }
 }
