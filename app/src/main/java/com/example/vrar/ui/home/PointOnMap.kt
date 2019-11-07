@@ -1,10 +1,8 @@
 package com.example.vrar.ui.home
 
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.PointF
+import android.graphics.*
 import android.util.Log
+import androidx.core.graphics.toRectF
 
 class PointOnMap(centr : PointF, text: String, navigate : Int) {
     var navigate = navigate
@@ -17,10 +15,30 @@ class PointOnMap(centr : PointF, text: String, navigate : Int) {
     fun draw(canvas :Canvas,paint : Paint){
         paint.color = color
         canvas.drawCircle(point.x, point.y, rMarks, paint)
-        paint.color = Color.BLACK
         if (active)
-        canvas.drawText(text,point.x + rMarks,point.y + rMarks / 2, paint)
+        textOutput(canvas, paint)
     }
+
+    fun textOutput(canvas: Canvas, paint: Paint){
+
+        var what= Rect()
+        paint.getTextBounds(text,0, text.length, what)
+        paint.color = Color.rgb(185,66,0)
+        if (point.x < canvas.width / 2){ // если надпись находится в левой части экрана
+
+            canvas.drawRect(point.x,point.y, point.x + what.width(), point.y - what.height(), paint)
+            paint.color = Color.BLACK
+            canvas.drawText(text,point.x,point.y, paint)
+        }
+        if (point.x > canvas.width / 2){ // если надпись находится в правой части экрана
+            canvas.drawRect(point.x,point.y, point.x - what.width(), point.y - what.height(), paint)
+            paint.color = Color.BLACK
+            canvas.drawText(text,point.x - what.width() ,point.y, paint)
+        }
+
+
+    }
+
     fun put(pointF: PointF):Boolean{
         if ((pointF.x <= point.x + rMarks) &&(pointF.x >= point.x - rMarks) &&
             (pointF.y <= point.y + rMarks) &&(pointF.y >= point.y - rMarks)) {

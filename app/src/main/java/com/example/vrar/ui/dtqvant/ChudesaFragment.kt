@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import com.example.vrar.R
 
@@ -20,7 +18,7 @@ class ChudesaFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val navController = Navigation.findNavController(container!!.findViewById(R.id.nav_host_fragment))
-        val root = inflater.inflate(R.layout.fragment_share, container, false)
+        val root = inflater.inflate(R.layout.fragment_shudesa, container, false)
 
         val webViewer: WebView = root.findViewById(R.id.share_web)
         webViewer.settings.javaScriptEnabled = true
