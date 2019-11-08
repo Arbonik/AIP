@@ -25,7 +25,7 @@ class ZeroKilometrFragment : Fragment() { // altair
         webView.settings.javaScriptEnabled = true
         webView.settings.allowFileAccessFromFileURLs = true
 
-           webView.loadUrl("file:///android_asset/altair/index.html")
+        webView.loadUrl("file:///android_asset/altair/index.html")
         return root
     }
 }

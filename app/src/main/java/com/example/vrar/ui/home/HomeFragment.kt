@@ -60,12 +60,11 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
 
     var pointsMap : Array<PointOnMap> = arrayOf(
         PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), R.id.nav_altair),
-        PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), R.id.nav_altair),
+       // PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), R.id.nav_altair),
         PointOnMap(PointF(1322f,314f),resources.getString(R.string.menu_nikolay), R.id.nav_nikolay),
         PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), R.id.nav_prostor),
-//        PointOnMap(PointF(739f,493f),"Нулевой километр", randomColor()),
         PointOnMap(PointF(417f,540f),resources.getString(R.string.menu_villiage), R.id.nav_villiage),
-        PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage), R.id.nav_villiage),
+        PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage_map), R.id.nav_villiage_map),
         PointOnMap(PointF(1023f,770f),resources.getString(R.string.menu_cavemap), R.id.nav_cave),
         PointOnMap(PointF(1234f,782f),resources.getString(R.string.menu_chudesa), R.id.nav_chudesa),
         PointOnMap(PointF(1158f,870f),resources.getString(R.string.menu_cave), R.id.nav_cc)

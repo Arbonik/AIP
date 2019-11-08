@@ -26,12 +26,12 @@ class PointOnMap(centr : PointF, text: String, navigate : Int) {
         paint.color = Color.rgb(185,66,0)
         if (point.x < canvas.width / 2){ // если надпись находится в левой части экрана
 
-            canvas.drawRect(point.x,point.y, point.x + what.width(), point.y - what.height(), paint)
+            canvas.drawRect(point.x,point.y + 15f, point.x + what.width() , point.y - what.height(), paint)
             paint.color = Color.BLACK
             canvas.drawText(text,point.x,point.y, paint)
         }
         if (point.x > canvas.width / 2){ // если надпись находится в правой части экрана
-            canvas.drawRect(point.x,point.y, point.x - what.width(), point.y - what.height(), paint)
+            canvas.drawRect(point.x,point.y + 15f, point.x - what.width(), point.y - what.height(), paint)
             paint.color = Color.BLACK
             canvas.drawText(text,point.x - what.width() ,point.y, paint)
         }

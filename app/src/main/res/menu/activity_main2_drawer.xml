@@ -40,7 +40,7 @@
                 <item
                     android:id="@+id/nav_villiage"
                     android:icon="@drawable/cyan_point_24dp"
-                    android:title="@string/menu_villiage" />
+                    android:title="@string/menu_vill" />
 
                 <item
                     android:id="@+id/nav_prostor"
@@ -55,15 +55,19 @@
     <item android:title="@string/diff_maps">
         <menu>
             <group android:checkableBehavior="single">
-            <item
-            android:id="@+id/nav_cave"
-            android:icon="@drawable/purple_point_24dp"
-            android:title="@string/menu_cavemap" />
+                <item android:id="@id/nav_villiage_map"
+                    android:icon="@drawable/cyan_point_24dp"
+                    android:title="@string/menu_vill"
+                    />
+                <item
+                android:id="@+id/nav_cave"
+                android:icon="@drawable/purple_point_24dp"
+                android:title="@string/menu_cavemap" />
 
-            <item
-                android:id="@+id/nav_cc"
-                android:icon="@drawable/cyan_point_24dp"
-                android:title="@string/menu_cave" />
+                <item
+                    android:id="@+id/nav_cc"
+                    android:icon="@drawable/cyan_point_24dp"
+                    android:title="@string/menu_cave" />
             </group>
         </menu>
 
