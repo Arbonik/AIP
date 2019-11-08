@@ -4,17 +4,14 @@ import android.content.Context
 import android.graphics.*
 import android.os.Bundle
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 
 
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
 
 import com.example.vrar.R
 
@@ -32,8 +29,9 @@ class HomeFragment : Fragment() {
 
         img.setOnTouchListener { p0, p1 ->
             if (p1?.action == MotionEvent.ACTION_DOWN) {
-                img.checkOnTouch(PointF(p1.x, p1.y))
-                Log.d("COORDS", "${p1.x}, ${p1.y}")
+                var intentPlace = img.checkOnTouch(PointF(p1.x, p1.y)) // получаем место, если пользователь нажал на кнопку 2 раз
+                if (intentPlace != null)
+                    navController.navigate(intentPlace?.navigate) // переходим на это место
             }
             true
         }
@@ -47,15 +45,12 @@ class HomeFragment : Fragment() {
 //
       //  webViewer.settings.loadWithOverviewMode = true
         // webViewer.settings.builtInZoomControls = false
-       // val navController = root.findNavController()
-       // navController.navigate(R.id.nav_cc)
 
         return root
     }
 }
 
 class MView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet){
-
     val h1 = 967f
     val w1 = 1582f // оригинальные размеры карты
     var h2 = 0f
@@ -64,15 +59,15 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     var paint = Paint()
 
     var pointsMap : Array<PointOnMap> = arrayOf(
-        PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), R.id.nav_slideshow),
-        PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), R.id.nav_slideshow),
-        PointOnMap(PointF(1322f,314f),resources.getString(R.string.menu_nikolay), R.id.nav_gallery),
-        PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), R.id.nav_slideshow),
+        PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), R.id.nav_altair),
+        PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), R.id.nav_altair),
+        PointOnMap(PointF(1322f,314f),resources.getString(R.string.menu_nikolay), R.id.nav_nikolay),
+        PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), R.id.nav_altair),
 //        PointOnMap(PointF(739f,493f),"Нулевой километр", randomColor()),
-        PointOnMap(PointF(417f,540f),resources.getString(R.string.menu_villiage), R.id.nav_send),
-        PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage), R.id.nav_send),
-        PointOnMap(PointF(1023f,770f),resources.getString(R.string.menu_cavemap), R.id.nav_tools),
-        PointOnMap(PointF(1234f,782f),resources.getString(R.string.menu_chudesa), R.id.nav_share),
+        PointOnMap(PointF(417f,540f),resources.getString(R.string.menu_villiage), R.id.nav_villiage),
+        PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage), R.id.nav_villiage),
+        PointOnMap(PointF(1023f,770f),resources.getString(R.string.menu_cavemap), R.id.nav_cave),
+        PointOnMap(PointF(1234f,782f),resources.getString(R.string.menu_chudesa), R.id.nav_chudesa),
         PointOnMap(PointF(1158f,870f),resources.getString(R.string.menu_cave), R.id.nav_cc)
     )
 
@@ -80,17 +75,18 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         return super.performClick()
     }
 
-    fun checkOnTouch(pointF: PointF):Boolean{
-        offActive()
-    for (i in (0..pointsMap.size - 1)) {
-        if(pointsMap[i].put(pointF))
-            return true
-    }
-        return false
+    fun checkOnTouch(pointF: PointF):PointOnMap?{
+        for (i in (0..pointsMap.size - 1)) {
+            if (pointsMap[i].put(pointF)){ // пользователь нажал на маркер
+                    if (pointsMap[i].clickOnMe == 2)
+                        return pointsMap[i]
+                offAllOther(pointsMap[i])
+            }
+        }
+        return null
     }
 
     override fun onDraw(canvas: Canvas) {
-
         super.onDraw(canvas)
         if (first){
             h2 = canvas.height.toFloat()
@@ -101,7 +97,6 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
 
         for (i in (0..pointsMap.size - 1)){
             paint.color = pointsMap[i].color
-            paint.textSize = 60f
             invalidate()
             pointsMap[i].draw(canvas, paint)
         }
@@ -115,17 +110,18 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     }
 
     fun initialize(){
+        paint.textSize = 60f
         for (i in pointsMap){
             i.point = PointF(cx(i.point.x), cy(i.point.y))
         }
     }
 
-    fun offActive(){
+    fun offAllOther(pon : PointOnMap?){
         for (i in pointsMap){
-            if (i.active) {
-                i.active = false
-            break
-            }
+            if (i == pon){}
+            else
+            i.disAcivated()
         }
+
     }
 }

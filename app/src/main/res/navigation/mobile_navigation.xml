@@ -12,31 +12,31 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_nikolay"
         android:name="com.example.vrar.ui.rerich.RerichFragment"
         android:label="@string/menu_nikolay"
         tools:layout="@layout/fragment_rerich" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_altair"
         android:name="com.example.vrar.ui.altayir.ZeroKilometrFragment"
         android:label="@string/menu_altair"
         tools:layout="@layout/fragment_altair" />
 
     <fragment
-        android:id="@+id/nav_tools"
+        android:id="@+id/nav_cave"
         android:name="com.example.vrar.ui.cavemap.CavemapFragment"
         android:label="@string/menu_cavemap"
         tools:layout="@layout/fragment_cave" />
 
     <fragment
-        android:id="@+id/nav_share"
+        android:id="@+id/nav_chudesa"
         android:name="com.example.vrar.ui.dtqvant.ChudesaFragment"
         android:label="@string/menu_chudesa"
-        tools:layout="@layout/fragment_share" />
+        tools:layout="@layout/fragment_shudesa" />
 
     <fragment
-        android:id="@+id/nav_send"
+        android:id="@+id/nav_villiage"
         android:name="com.example.vrar.ui.viliage.VilliageFragment"
         android:label="@string/menu_villiage"
         tools:layout="@layout/fragment_villiage" />
