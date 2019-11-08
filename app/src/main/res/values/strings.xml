@@ -3,7 +3,7 @@
     <string name="title_activity_main2">Main2Activity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_subtitle">Создано в детском технопарке "Кванториум22"</string>
+    <string name="nav_header_subtitle">Создано в детском технопарке Алтайского Края</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -15,7 +15,9 @@
     <string name="menu_prostor">Галерея "Простор"</string>
     <string name="menu_tavd_cave">Тавдинская Пещера</string>
     <string name="menu_cave">Пещерный комплекс</string>
-    <string name="menu_villiage">Усадьба Саржевских</string>
+    <string name="menu_villiage">Усадьба Саржевских - 3D тур</string>
+    <string name="menu_villiage_map">Усадьба Саржевских - интерактивная карта</string>
+
     <string name="menu_ozero">Озеро "Бирюзовая Катунь"</string>
     <string name="menu_obzor">Обзорный ролик</string>
 

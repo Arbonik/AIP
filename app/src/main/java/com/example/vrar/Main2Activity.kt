@@ -34,8 +34,8 @@ class Main2Activity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send, R.id.nav_cc, R.id.nav_authors, R.id.nav_prostor,R.id.nav_obzor
+                R.id.nav_home, R.id.nav_obzor, R.id.nav_nikolay,
+                R.id.nav_altair, R.id.nav_chudesa, R.id.nav_villiage, R.id.nav_cc, R.id.nav_authors, R.id.nav_prostor, R.id.nav_cave
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -44,7 +44,6 @@ class Main2Activity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main2, menu)
 
         return true

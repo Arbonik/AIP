@@ -31,7 +31,7 @@ class HomeFragment : Fragment() {
             if (p1?.action == MotionEvent.ACTION_DOWN) {
                 var intentPlace = img.checkOnTouch(PointF(p1.x, p1.y)) // получаем место, если пользователь нажал на кнопку 2 раз
                 if (intentPlace != null)
-                    navController.navigate(intentPlace?.navigate) // переходим на это место
+                    navController.navigate(intentPlace.navigate) // переходим на это место
             }
             true
         }
@@ -62,7 +62,7 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), R.id.nav_altair),
         PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), R.id.nav_altair),
         PointOnMap(PointF(1322f,314f),resources.getString(R.string.menu_nikolay), R.id.nav_nikolay),
-        PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), R.id.nav_altair),
+        PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), R.id.nav_prostor),
 //        PointOnMap(PointF(739f,493f),"Нулевой километр", randomColor()),
         PointOnMap(PointF(417f,540f),resources.getString(R.string.menu_villiage), R.id.nav_villiage),
         PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage), R.id.nav_villiage),

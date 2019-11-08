@@ -17,9 +17,9 @@ class ProstorFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val navController = Navigation.findNavController(container!!.findViewById(R.id.nav_host_fragment))
-        val root = inflater.inflate(R.layout.fragment_prostor, container, false)
+        val root = inflater.inflate(R.layout.fragment_obzor, container, false)
 
-        var web: WebView = root.findViewById(R.id.villiage_show)
+        var web: WebView = root.findViewById(R.id.obzor_show)
         web.settings.javaScriptEnabled = true
         web.settings.allowFileAccessFromFileURLs = true
         web.settings.allowFileAccess = true
