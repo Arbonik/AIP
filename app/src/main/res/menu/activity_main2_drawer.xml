@@ -8,6 +8,10 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/red_point_24dp"
             android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_obzor"
+            android:icon="@drawable/red_point_24dp"
+            android:title="@string/menu_obzor"/>
 
     <item android:title="@string/diff_panorams">
         <menu>
@@ -37,6 +41,11 @@
                     android:id="@+id/nav_send"
                     android:icon="@drawable/cyan_point_24dp"
                     android:title="@string/menu_villiage" />
+
+                <item
+                    android:id="@+id/nav_prostor"
+                    android:icon="@drawable/cyan_point_24dp"
+                    android:title="@string/menu_prostor" />
                 </group>
 
             </menu>

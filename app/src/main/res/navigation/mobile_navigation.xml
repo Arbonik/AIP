@@ -51,5 +51,16 @@
         android:name="com.example.vrar.ui.authors.AuthorsFragment"
         android:label="@string/diff_authors"
         tools:layout="@layout/fragmen_authors"/>
+    <fragment
+        android:id="@+id/nav_prostor"
+        android:name="com.example.vrar.ui.prostor.ProstorFragment"
+        android:label="@string/menu_prostor"
+        tools:layout="@layout/fragment_prostor"
+        />
+    <fragment
+        android:id="@+id/nav_obzor"
+        android:name="com.example.vrar.ui.obzor.ProstorFragment"
+        android:label="@string/menu_obzor"
+        tools:layout="@layout/fragment_obzor"/>
 
 </navigation>
