@@ -35,18 +35,7 @@ class HomeFragment : Fragment() {
             }
             true
         }
-
-//        val webViewer: WebView = root.findViewById(R.id.webViewer)
-//        webViewer.settings.javaScriptEnabled = true
-//        webViewer.settings.allowFileAccessFromFileURLs = true
-//        webViewer.settings.allowFileAccess = true
-//
-//        webViewer.settings.useWideViewPort = true
-//
-      //  webViewer.settings.loadWithOverviewMode = true
-        // webViewer.settings.builtInZoomControls = false
-
-        return root
+     return root
     }
 }
 
@@ -75,13 +64,15 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     }
 
     fun checkOnTouch(pointF: PointF):PointOnMap?{
-        for (i in (0..pointsMap.size - 1)) {
-            if (pointsMap[i].put(pointF)){ // пользователь нажал на маркер
-                    if (pointsMap[i].clickOnMe == 2)
-                        return pointsMap[i]
-                offAllOther(pointsMap[i])
+        for (i in (0..pointsMap.size - 1)) { // проходим по маркерам
+            if (pointsMap[i].put(pointF)){ // если пользователь нажал на маркер
+                    if (pointsMap[i].clickOnMe == 2) // если пользователь нажал на него дважды
+                        return pointsMap[i] // возвращаем чтобы перейти по хранящейся в нём ссылке
+                    offAllOther(pointsMap[i]) // стираем предыдущую метку
+                return null // завершаем функцию чтобы не вызвать дальнейшего затирания
             }
         }
+        offAllOther(null) // если пользователь нажал мимо маркера затираем всё
         return null
     }
 
@@ -102,9 +93,9 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
     }
 
     fun cx (x:Float):Float{
-        return (w2 * x) / w1
+        return (w2 * x) / w1 // трансформация координат под расширение устройства
     }
-    fun cy (y:Float):Float{
+    fun cy (y:Float):Float{ // трансформация координат под расширение устройства
         return (h2 * y) / h1
     }
 
@@ -121,6 +112,5 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
             else
             i.disAcivated()
         }
-
     }
 }

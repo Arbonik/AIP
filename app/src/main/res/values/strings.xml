@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">AIP</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main2">Бирюзовая катунь</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_subtitle">Создано в детском технопарке Алтайского Края</string>
+    <string name="nav_header_subtitle">Создано в Детском технопарке Алтайского Края</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
