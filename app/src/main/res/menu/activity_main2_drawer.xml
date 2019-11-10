@@ -70,8 +70,8 @@
                     android:title="@string/menu_cave" />
             </group>
         </menu>
-
     </item>
+
         <item android:title="О проекте">
             <menu>
                 <group android:checkableBehavior="single">
@@ -82,7 +82,7 @@
                 </group>
             </menu>
         </item>
-</group>
 
+    </group>
 
 </menu>
