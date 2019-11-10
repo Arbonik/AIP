@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.graphics.plus
 
 
 import androidx.fragment.app.Fragment
@@ -53,7 +54,7 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         PointOnMap(PointF(1322f,314f),resources.getString(R.string.menu_nikolay), R.id.nav_nikolay),
         PointOnMap(PointF(690f,440f),resources.getString(R.string.menu_prostor), R.id.nav_prostor),
         PointOnMap(PointF(417f,540f),resources.getString(R.string.menu_villiage), R.id.nav_villiage),
-        PointOnMap(PointF(479f,585f),resources.getString(R.string.menu_villiage_map), R.id.nav_villiage_map),
+        PointOnMap(PointF(479f,605f),resources.getString(R.string.menu_villiage_map), R.id.nav_villiage_map),
         PointOnMap(PointF(1023f,770f),resources.getString(R.string.menu_cavemap), R.id.nav_cave),
         PointOnMap(PointF(1234f,782f),resources.getString(R.string.menu_chudesa), R.id.nav_chudesa),
         PointOnMap(PointF(1158f,870f),resources.getString(R.string.menu_cave), R.id.nav_cc)
@@ -112,5 +113,101 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
             else
             i.disAcivated()
         }
+    }
+
+    inner class PointOnMap(centr : PointF, text: String, navigate : Int) {
+        var navigate = navigate // ссылка на соответствующий фрагмент
+        val rMarks = 30f // радиус маркера
+        var point :PointF = centr // координаты центра маркера
+        var color : Int = resources.getColor(R.color.colorPrimaryDark) //цвет обводки маркера
+        var text : String = text // текст маркера
+        var active = false // активен ли маркер
+        var clickOnMe = 0 // считает количество нажатий
+        var maskBackground : Rect? = null // маска для перехода по нажатию на текст
+        fun draw(canvas :Canvas,paint : Paint){
+            paint.color = color
+            canvas.drawCircle(point.x, point.y, rMarks + rMarks * 0.2f, paint)
+            paint.color =  resources.getColor(R.color.colorPrimary)
+            canvas.drawCircle(point.x, point.y, rMarks, paint)
+            if (active)
+                textOutput(canvas, paint)
+        }
+
+        fun textOutput(canvas: Canvas, paint: Paint){
+            var what= Rect()
+            maskBackground = what
+            paint.getTextBounds(text,0, text.length, what)
+            if (point.x < canvas.width / 2){ // если надпись находится в левой части экрана
+                paint.color = resources.getColor(R.color.colorPrimaryDark)
+                drawBackForText(canvas, paint, Rect(what + Rect(-5,-10,10,20)) , true)
+                paint.color = resources.getColor(R.color.colorPrimary)
+                drawBackForText(canvas, paint, what, true)
+                paint.color = Color.WHITE
+                canvas.drawText(text,point.x,point.y + what.height() / 2f - 12f, paint)
+            }
+            if (point.x > canvas.width / 2){ // если надпись находится в правой части экрана
+                paint.color = resources.getColor(R.color.colorPrimaryDark)
+                drawBackForText(canvas, paint, Rect(what + Rect(-5,-10,10,20)), false)
+                paint.color = resources.getColor(R.color.colorPrimary)
+                drawBackForText(canvas, paint, what, false)
+                paint.color = Color.WHITE
+                canvas.drawText(text,point.x - what.width() ,point.y + what.height() / 2f - 12f, paint)
+            }
+        }
+
+        fun drawBackForText(canvas: Canvas, paint: Paint, what : Rect, check : Boolean){
+            // check = переменная, определяет с какой стороны экрана отрисовывается фон
+            canvas.drawCircle(point.x , point.y,
+                what.height() / 2f, paint)
+            if(check)
+                canvas.drawCircle(point.x + what.width(),point.y ,
+                    what.height() / 2f, paint)
+            else
+                canvas.drawCircle(point.x - what.width(),point.y ,
+                    what.height() / 2f, paint)
+            if(check)
+                canvas.drawRect(point.x,point.y + what.height() / 2f, point.x + what.width() , point.y - what.height()  / 2f, paint)
+            else
+                canvas.drawRect(point.x,point.y + what.height() / 2f, point.x - what.width(), point.y - what.height()  / 2f, paint)
+        }
+
+
+        fun put(pointF: PointF):Boolean{
+            if ((pointF.x <= point.x + rMarks) &&(pointF.x >= point.x - rMarks) &&
+                (pointF.y <= point.y + rMarks) &&(pointF.y >= point.y - rMarks)) {
+                activate()
+                return true
+            }
+            if (clickOnMe == 1) // если нажатие повторное нужно проверить и всплывающее окно
+            {
+                if(point.x < this@MView.width / 2)
+                    if ((pointF.x <= point.x + maskBackground!!.width()) && (pointF.x >= point.x ) &&
+                        (pointF.y <= point.y + maskBackground!!.height() / 2f ) && (pointF.y >= point.y - maskBackground!!.height()) )
+                    {
+                        activate()
+                        return true
+                    }
+                if(point.x > this@MView.width / 2)
+                    if ((pointF.x <= point.x) && (pointF.x >= point.x  - maskBackground!!.width()) &&
+                        (pointF.y <= point.y + maskBackground!!.height() / 2f ) && (pointF.y >= point.y - maskBackground!!.height()) )
+                    {
+                        activate()
+                        return true
+                    }
+            }
+            return false
+        }
+
+        fun activate(){
+            active = !active
+            ++clickOnMe
+        }
+
+        fun disAcivated(){
+            active = false
+            clickOnMe = 0
+            maskBackground = null
+        }
+
     }
 }

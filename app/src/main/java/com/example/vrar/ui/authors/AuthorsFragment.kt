@@ -69,7 +69,6 @@ class AuthorAdapter(autors : List<Author>) : RecyclerView.Adapter<AuthorAdapter.
     }
 
     class AuthorViewHolder(v:View) : RecyclerView.ViewHolder(v) {
-
         var teamName : TextView = v.findViewById(R.id.name)
         var projectName : TextView = v.findViewById(R.id.project)
         var winner : TextView = v.findViewById(R.id.status)
@@ -80,8 +79,6 @@ class AuthorAdapter(autors : List<Author>) : RecyclerView.Adapter<AuthorAdapter.
             winner.setText(author.status)
             if (winner.text.toString() == "Победители")
                 winner.setTextColor(Color.GREEN)
-            else
-                winner.setTextColor(Color.BLUE)
             from.setText(author.region)
         }
 

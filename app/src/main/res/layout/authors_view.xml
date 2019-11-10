@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+<LinearLayout
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -8,6 +16,7 @@
     android:paddingBottom="20dp"
     android:background="@color/colorPrimaryDark"
     android:weightSum="100"
+
    >
         <TextView
             style="@style/AuthorItem"
@@ -25,6 +34,7 @@
             tools:text="@string/menu_nikolay"/>
 
         <TextView
+            style="@style/AuthorItem"
             android:gravity="center"
             android:layout_weight="25"
             android:id="@+id/status"
@@ -38,5 +48,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="@string/menu_nikolay"/>
-
+                </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
 </LinearLayout>

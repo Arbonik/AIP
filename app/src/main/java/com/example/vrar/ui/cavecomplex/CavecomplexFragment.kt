@@ -25,6 +25,9 @@ class CavecomplexFragment : Fragment() { // altair
 
         webView.settings.javaScriptEnabled = true
         webView.settings.allowFileAccessFromFileURLs = true
+        webView.settings.allowFileAccess = true
+        webView.settings.builtInZoomControls = true
+        webView.settings.useWideViewPort = true
         webView.settings.loadWithOverviewMode = true
 
         webView.loadUrl("file:///android_asset/htmls/cave_complex.html")

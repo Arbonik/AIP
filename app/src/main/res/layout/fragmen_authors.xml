@@ -15,7 +15,7 @@
         android:id="@+id/project"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Название прокта"
+        android:text="Название проекта"
         />
     <TextView
        style="@style/AuthorHeader"
