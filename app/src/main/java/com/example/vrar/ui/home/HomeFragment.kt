@@ -60,10 +60,6 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         PointOnMap(PointF(1158f,870f),resources.getString(R.string.menu_cave), R.id.nav_cc)
     )
 
-    override fun performClick(): Boolean {
-        return super.performClick()
-    }
-
     fun checkOnTouch(pointF: PointF):PointOnMap?{
         for (i in (0..pointsMap.size - 1)) { // проходим по маркерам
             if (pointsMap[i].put(pointF)){ // если пользователь нажал на маркер
