@@ -2,7 +2,11 @@ package com.example.vrar.ui.home
 
 import android.content.Context
 import android.graphics.*
+import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
+import android.hardware.display.DisplayManager
+import android.icu.text.DisplayContext
+import android.media.audiofx.DynamicsProcessing
 import android.os.Bundle
 import android.util.AttributeSet
 import android.util.Log
@@ -46,10 +50,14 @@ class HomeFragment : Fragment() {
 }
 
 class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, attributeSet){
-    val h1 = 967f
-    val w1 = 1582f // оригинальные размеры карты
+    val h1 = 967
+    val w1 = 1582 // оригинальные размеры карты
     var h2 = 0f
     var w2 = 0f // размеры холста
+    var rMarks = 30f // радиус маркера
+
+    lateinit var back : Bitmap
+
     var first = true
     var paint = Paint()
 
@@ -65,6 +73,10 @@ class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, a
         PointOnMap(PointF(1158f,870f),resources.getString(R.string.menu_cave), R.id.nav_cc)
     )
 
+    init {
+        back = BitmapFactory.decodeResource(resources, R.drawable.karta)
+        rMarks = width * 0.05f
+    }
     fun checkOnTouch(pointF: PointF):PointOnMap?{
         for (i in (0..pointsMap.size - 1)) { // проходим по маркерам
             if (pointsMap[i].put(pointF)){ // если пользователь нажал на маркер
@@ -80,7 +92,12 @@ class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, a
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas.drawBitmap(BitmapFactory.decodeResource(resources, R.drawable.karta), )
+
+        canvas.drawBitmap(back,
+            Rect(0,0,  back.width, back.height),
+            Rect(0,0, width, height),
+            paint
+        ) // отрисовка карты
 
         if (first){
             h2 = canvas.height.toFloat()
@@ -104,47 +121,11 @@ class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, a
     }
 
     fun initialize(){
-        paint.textSize = 60f
+        paint.textSize = rMarks * 2
         for (i in pointsMap){
             i.point = PointF(cx(i.point.x), cy(i.point.y))
         }
 
-        setImageResource(R.drawable.karta)
-        Log.d("Scale", this.width.toString())
-        Log.d("Scale", this.height.toString())
-       // this.
-       // background = getScaledBitmap(this.width,this.height)
-       // Log.d("Scale", "sucsce")
-    }
-
-    fun getScaledBitmap(destWidth : Int, destHeight : Int):Bitmap{
-        val heightMap = 1582
-        Log.d("Scale", heightMap.toString())
-        val widthMap = 967
-        Log.d("Scale", widthMap.toString())
-        Log.d("Scale", "BehindSource")
-        //val sourceImage = resources.getDrawable(R.drawable.karta)
-        Log.d("Scale", "LoadSource")
-
-        var options = BitmapFactory.Options()
-        Log.d("Scale", "CreateOptionsOne")
-
-        var inSampleSize = 1.0
-
-        if (heightMap > destHeight || widthMap > destWidth){
-            var hScale = heightMap / destHeight
-            Log.d("Scale", hScale.toString())
-            var wScale = widthMap / destWidth
-            Log.d("Scale", wScale.toString())
-
-            inSampleSize = round(if (hScale > wScale) hScale.toDouble() else wScale.toDouble())
-            Log.d("Scale", inSampleSize.toString())
-
-            options = BitmapFactory.Options()
-            options.inSampleSize = inSampleSize.toInt()
-        }
-
-        return BitmapFactory.decodeResource(resources, R.drawable.karta, options)
     }
 
     fun offAllOther(pon : PointOnMap?){
@@ -157,7 +138,6 @@ class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, a
 
     inner class PointOnMap(centr : PointF, text: String, navigate : Int) {
         var navigate = navigate // ссылка на соответствующий фрагмент
-        val rMarks = 30f // радиус маркера
         var point :PointF = centr // координаты центра маркера
         var color : Int = resources.getColor(R.color.colorPrimaryDark) //цвет обводки маркера
         var text : String = text // текст маркера
