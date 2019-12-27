@@ -2,12 +2,16 @@ package com.example.vrar.ui.home
 
 import android.content.Context
 import android.graphics.*
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.core.graphics.drawable.toDrawable
 import androidx.core.graphics.plus
 
 
@@ -15,6 +19,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 
 import com.example.vrar.R
+import kotlin.math.round
 
 class HomeFragment : Fragment() {
 
@@ -40,7 +45,7 @@ class HomeFragment : Fragment() {
     }
 }
 
-class MView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet){
+class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, attributeSet){
     val h1 = 967f
     val w1 = 1582f // оригинальные размеры карты
     var h2 = 0f
@@ -75,6 +80,8 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        canvas.drawBitmap(BitmapFactory.decodeResource(resources, R.drawable.karta), )
+
         if (first){
             h2 = canvas.height.toFloat()
             w2 = canvas.width.toFloat()
@@ -101,6 +108,43 @@ class MView(context: Context, attributeSet: AttributeSet) : View(context, attrib
         for (i in pointsMap){
             i.point = PointF(cx(i.point.x), cy(i.point.y))
         }
+
+        setImageResource(R.drawable.karta)
+        Log.d("Scale", this.width.toString())
+        Log.d("Scale", this.height.toString())
+       // this.
+       // background = getScaledBitmap(this.width,this.height)
+       // Log.d("Scale", "sucsce")
+    }
+
+    fun getScaledBitmap(destWidth : Int, destHeight : Int):Bitmap{
+        val heightMap = 1582
+        Log.d("Scale", heightMap.toString())
+        val widthMap = 967
+        Log.d("Scale", widthMap.toString())
+        Log.d("Scale", "BehindSource")
+        //val sourceImage = resources.getDrawable(R.drawable.karta)
+        Log.d("Scale", "LoadSource")
+
+        var options = BitmapFactory.Options()
+        Log.d("Scale", "CreateOptionsOne")
+
+        var inSampleSize = 1.0
+
+        if (heightMap > destHeight || widthMap > destWidth){
+            var hScale = heightMap / destHeight
+            Log.d("Scale", hScale.toString())
+            var wScale = widthMap / destWidth
+            Log.d("Scale", wScale.toString())
+
+            inSampleSize = round(if (hScale > wScale) hScale.toDouble() else wScale.toDouble())
+            Log.d("Scale", inSampleSize.toString())
+
+            options = BitmapFactory.Options()
+            options.inSampleSize = inSampleSize.toInt()
+        }
+
+        return BitmapFactory.decodeResource(resources, R.drawable.karta, options)
     }
 
     fun offAllOther(pon : PointOnMap?){
