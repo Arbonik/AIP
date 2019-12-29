@@ -75,7 +75,7 @@ class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, a
 
     init {
         back = BitmapFactory.decodeResource(resources, R.drawable.karta)
-        rMarks = width * 0.05f
+
     }
     fun checkOnTouch(pointF: PointF):PointOnMap?{
         for (i in (0..pointsMap.size - 1)) { // проходим по маркерам
@@ -100,6 +100,7 @@ class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, a
         ) // отрисовка карты
 
         if (first){
+            rMarks = width * 0.02f
             h2 = canvas.height.toFloat()
             w2 = canvas.width.toFloat()
             initialize()
