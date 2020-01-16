@@ -2,20 +2,13 @@ package com.example.vrar.ui.home
 
 import android.content.Context
 import android.graphics.*
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
-import android.hardware.display.DisplayManager
-import android.icu.text.DisplayContext
-import android.media.audiofx.DynamicsProcessing
 import android.os.Bundle
 import android.util.AttributeSet
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.core.graphics.drawable.toDrawable
+
 import androidx.core.graphics.plus
 
 
@@ -23,6 +16,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 
 import com.example.vrar.R
+import com.example.vrar.ui.MapsView
 import kotlin.math.round
 
 class HomeFragment : Fragment() {
@@ -49,18 +43,14 @@ class HomeFragment : Fragment() {
     }
 }
 
-class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, attributeSet){
+class MView(context: Context, attributeSet: AttributeSet) : MapsView(context, attributeSet){
     val h1 = 967
     val w1 = 1582 // оригинальные размеры карты
     var h2 = 0f
     var w2 = 0f // размеры холста
     var rMarks = 30f // радиус маркера
 
-    lateinit var back : Bitmap
-
     var first = true
-    var paint = Paint()
-
     var pointsMap : Array<PointOnMap> = arrayOf(
         PointOnMap(PointF(532f,225f), resources.getString(R.string.menu_altair), R.id.nav_altair),
        // PointOnMap(PointF(524f,320f),resources.getString(R.string.menu_ozero), R.id.nav_altair),
@@ -75,7 +65,6 @@ class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, a
 
     init {
         back = BitmapFactory.decodeResource(resources, R.drawable.karta)
-
     }
     fun checkOnTouch(pointF: PointF):PointOnMap?{
         for (i in (0..pointsMap.size - 1)) { // проходим по маркерам
@@ -93,11 +82,6 @@ class MView(context: Context, attributeSet: AttributeSet) : ImageView(context, a
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
-        canvas.drawBitmap(back,
-            Rect(0,0,  back.width, back.height),
-            Rect(0,0, width, height),
-            paint
-        ) // отрисовка карты
 
         if (first){
             rMarks = width * 0.02f
